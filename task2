@@ -1,0 +1,9 @@
+def readJson(plik_wejsciowy):
+    try:
+        with open(plik_wejsciowy, 'r') as plik:
+            dane = json.load(plik)
+        return dane
+    except FileNotFoundError:
+        print(f"Plik '{plik_wejsciowy}' nie został znaleziony.")
+    except json.JSONDecodeError:
+        print(f"Błędna składnia JSON w pliku '{plik_wejsciowy}'.")
