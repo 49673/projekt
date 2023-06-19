@@ -1,0 +1,7 @@
+def saveYaml(plik_wyjsciowy, dane):
+    try:
+        with open(plik_wyjsciowy, 'w') as plik:
+            yaml.dump(dane, plik, default_flow_style=False)
+        print(f"Dane zapisane w formacie YAML w pliku '{plik_wyjsciowy}'.")
+    except FileNotFoundError:
+        print(f"Nie znaleziono katalogu wyjściowego dla pliku '{plik_wyjsciowy}'.")
