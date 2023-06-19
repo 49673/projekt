@@ -1,0 +1,7 @@
+def saveJson(plik_wyjsciowy, dane):
+    try:
+        with open(plik_wyjsciowy, 'w') as plik:
+            json.dump(dane, plik, indent=4)
+        print(f"Dane zapisane w formacie JSON w pliku '{plik_wyjsciowy}'.")
+    except FileNotFoundError:
+        print(f"Nie znaleziono katalogu wyjściowego dla pliku '{plik_wyjsciowy}'.")
