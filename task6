@@ -1,0 +1,9 @@
+def readXml(plik_wejsciowy):
+    try:
+        drzewo = ET.parse(plik_wejsciowy)
+        korzen = drzewo.getroot()
+        return korzen
+    except FileNotFoundError:
+        print(f"Plik '{plik_wejsciowy}' nie został znaleziony.")
+    except ET.ParseError:
+        print(f"Błędna składnia XML w pliku '{plik_wejsciowy}'.")
