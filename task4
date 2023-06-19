@@ -1,0 +1,9 @@
+def readYaml(plik_wejsciowy):
+    try:
+        with open(plik_wejsciowy, 'r') as plik:
+            dane = yaml.safe_load(plik)
+        return dane
+    except FileNotFoundError:
+        print(f"Plik '{plik_wejsciowy}' nie został znaleziony.")
+    except yaml.YAMLError:
+        print(f"Błędna składnia YAML w pliku '{plik_wejsciowy}'.")
