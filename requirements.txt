@@ -1,2 +1,4 @@
 argparse
-PyYAML
+pyyaml
+elementpath
+pyinstaller
