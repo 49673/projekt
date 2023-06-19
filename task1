@@ -1,0 +1,11 @@
+import argparse
+import json
+import yaml
+import xml.etree.ElementTree as ET
+
+
+def parse():
+    parser = argparse.ArgumentParser(description='Program do obsługi różnych formatów plików.')
+    parser.add_argument('plik_wejsciowy', help='Ścieżka do pliku wejściowego')
+    parser.add_argument('plik_wyjsciowy', help='Ścieżka do pliku wyjściowego')
+    return parser.parse_args()
