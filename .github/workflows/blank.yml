@@ -30,18 +30,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Wybierz odpowiednią wersję Pythona
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt  # Zainstaluj wymagane zależności
+          pip install -r requirements.txt  
 
       - name: Build executable
         run: |
-          # Tutaj umieść komendy budujące plik .exe
+
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: My Executable
-          path: .github/workflows/naszaNazwaWorkflow.yml
+          path: .github/workflows/plik.exe
