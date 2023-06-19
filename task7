@@ -1,0 +1,11 @@
+def saveXml(plik_wyjsciowy, korzen):
+    try:
+        drzewo = ET.ElementTree(korzen)
+        drzewo.write(plik_wyjsciowy)
+        print(f"Dane zapisane w formacie XML w pliku '{plik_wyjsciowy}'.")
+    except FileNotFoundError:
+        print(f"Nie znaleziono katalogu wyjściowego dla pliku '{plik_wyjsciowy}'.")
+
+
+def main():
+    args = parsuj_argumenty
